@@ -231,10 +231,10 @@ export const PRODUCTS: Product[] = [
     originalPrice: 5700,
     rating: 4.8,
     reviewsCount: 20,
-    image: '/assets/Products/Morja, by gulljee volume 7/576250577_1430406579086231_1266473648545594627_n.jpg',
+    image: '/assets/Products/Morja/576250577_1430406579086231_1266473648545594627_n.jpg',
     additionalImages: [
-      '/assets/Products/Morja, by gulljee volume 7/576372613_1430406769086212_7668724769763923333_n.jpg',
-      '/assets/Products/Morja, by gulljee volume 7/576680360_1430406945752861_8771579035782719322_n.jpg'
+      '/assets/Products/Morja/576372613_1430406769086212_7668724769763923333_n.jpg',
+      '/assets/Products/Morja/576680360_1430406945752861_8771579035782719322_n.jpg'
     ],
     fabric: 'Pure Lawn Cotton with Heavy Embroidered Front & Matching Dupatta',
     description: 'Exclusive 3-piece luxury lawn outfit from Morja by Gulljee Volume 7 in Crimson Red. Includes front silhouette, intricate embroidery detail shot, and draped dupatta view of the exact same design.',
@@ -253,10 +253,10 @@ export const PRODUCTS: Product[] = [
     originalPrice: 5850,
     rating: 4.9,
     reviewsCount: 24,
-    image: '/assets/Products/Morja, by gulljee volume 7/576754659_1430406972419525_3748629922017711747_n.jpg',
+    image: '/assets/Products/Morja/576754659_1430406972419525_3748629922017711747_n.jpg',
     additionalImages: [
-      '/assets/Products/Morja, by gulljee volume 7/576892746_1430405922419630_2708457680575878834_n.jpg',
-      '/assets/Products/Morja, by gulljee volume 7/576898440_1430406082419614_5677066900477198186_n.jpg'
+      '/assets/Products/Morja/576892746_1430405922419630_2708457680575878834_n.jpg',
+      '/assets/Products/Morja/576898440_1430406082419614_5677066900477198186_n.jpg'
     ],
     fabric: 'Pure Lawn Cotton with Heavy Embroidered Front & Matching Dupatta',
     description: 'Exclusive 3-piece luxury lawn outfit from Morja by Gulljee Volume 7 in Sapphire Blue. Includes front silhouette, intricate embroidery detail shot, and draped dupatta view of the exact same design.',
@@ -273,10 +273,10 @@ export const PRODUCTS: Product[] = [
     originalPrice: 6000,
     rating: 5.0,
     reviewsCount: 28,
-    image: '/assets/Products/Morja, by gulljee volume 7/576913453_1430406415752914_9121092646202775225_n.jpg',
+    image: '/assets/Products/Morja/576913453_1430406415752914_9121092646202775225_n.jpg',
     additionalImages: [
-      '/assets/Products/Morja, by gulljee volume 7/576968999_1430405809086308_2672073425542151778_n.jpg',
-      '/assets/Products/Morja, by gulljee volume 7/577541252_1430406375752918_2570217263155744915_n.jpg'
+      '/assets/Products/Morja/576968999_1430405809086308_2672073425542151778_n.jpg',
+      '/assets/Products/Morja/577541252_1430406375752918_2570217263155744915_n.jpg'
     ],
     fabric: 'Pure Lawn Cotton with Heavy Embroidered Front & Matching Dupatta',
     description: 'Exclusive 3-piece luxury lawn outfit from Morja by Gulljee Volume 7 in Mint Green. Includes front silhouette, intricate embroidery detail shot, and draped dupatta view of the exact same design.',
@@ -294,10 +294,10 @@ export const PRODUCTS: Product[] = [
     originalPrice: 6150,
     rating: 4.8,
     reviewsCount: 32,
-    image: '/assets/Products/Morja, by gulljee volume 7/577838398_1430405885752967_8122208157954843471_n.jpg',
+    image: '/assets/Products/Morja/577838398_1430405885752967_8122208157954843471_n.jpg',
     additionalImages: [
-      '/assets/Products/Morja, by gulljee volume 7/577901851_1430406475752908_7451325391285925503_n.jpg',
-      '/assets/Products/Morja, by gulljee volume 7/578066838_1430406285752927_1331544240362608750_n.jpg'
+      '/assets/Products/Morja/577901851_1430406475752908_7451325391285925503_n.jpg',
+      '/assets/Products/Morja/578066838_1430406285752927_1331544240362608750_n.jpg'
     ],
     fabric: 'Pure Lawn Cotton with Heavy Embroidered Front & Matching Dupatta',
     description: 'Exclusive 3-piece luxury lawn outfit from Morja by Gulljee Volume 7 in Sunset Coral. Includes front silhouette, intricate embroidery detail shot, and draped dupatta view of the exact same design.',
@@ -315,10 +315,10 @@ export const PRODUCTS: Product[] = [
     originalPrice: 6300,
     rating: 4.9,
     reviewsCount: 36,
-    image: '/assets/Products/Morja, by gulljee volume 7/578249958_1430406835752872_8718673179705080913_n.jpg',
+    image: '/assets/Products/Morja/578249958_1430406835752872_8718673179705080913_n.jpg',
     additionalImages: [
-      '/assets/Products/Morja, by gulljee volume 7/578256909_1430406525752903_2488433881830397215_n.jpg',
-      '/assets/Products/Morja, by gulljee volume 7/578257374_1430406019086287_2799357141396670723_n.jpg'
+      '/assets/Products/Morja/578256909_1430406525752903_2488433881830397215_n.jpg',
+      '/assets/Products/Morja/578257374_1430406019086287_2799357141396670723_n.jpg'
     ],
     fabric: 'Pure Lawn Cotton with Heavy Embroidered Front & Matching Dupatta',
     description: 'Exclusive 3-piece luxury lawn outfit from Morja by Gulljee Volume 7 in Ivory Gold. Includes front silhouette, intricate embroidery detail shot, and draped dupatta view of the exact same design.',
@@ -336,10 +336,10 @@ export const PRODUCTS: Product[] = [
     originalPrice: 6450,
     rating: 5.0,
     reviewsCount: 40,
-    image: '/assets/Products/Morja, by gulljee volume 7/578259972_1430407019086187_4917633628690097862_n.jpg',
+    image: '/assets/Products/Morja/578259972_1430407019086187_4917633628690097862_n.jpg',
     additionalImages: [
-      '/assets/Products/Morja, by gulljee volume 7/578263713_1430406192419603_7036796352109025289_n.jpg',
-      '/assets/Products/Morja, by gulljee volume 7/578266446_1430405842419638_7760491068157749151_n.jpg'
+      '/assets/Products/Morja/578263713_1430406192419603_7036796352109025289_n.jpg',
+      '/assets/Products/Morja/578266446_1430405842419638_7760491068157749151_n.jpg'
     ],
     fabric: 'Pure Lawn Cotton with Heavy Embroidered Front & Matching Dupatta',
     description: 'Exclusive 3-piece luxury lawn outfit from Morja by Gulljee Volume 7 in Mystic Plum. Includes front silhouette, intricate embroidery detail shot, and draped dupatta view of the exact same design.',
@@ -356,10 +356,10 @@ export const PRODUCTS: Product[] = [
     originalPrice: 6600,
     rating: 4.8,
     reviewsCount: 44,
-    image: '/assets/Products/Morja, by gulljee volume 7/578267129_1430406059086283_1812564623282664501_n.jpg',
+    image: '/assets/Products/Morja/578267129_1430406059086283_1812564623282664501_n.jpg',
     additionalImages: [
-      '/assets/Products/Morja, by gulljee volume 7/578273891_1430406915752864_7156747994795213048_n.jpg',
-      '/assets/Products/Morja, by gulljee volume 7/578276362_1430406132419609_4192088856057847622_n.jpg'
+      '/assets/Products/Morja/578273891_1430406915752864_7156747994795213048_n.jpg',
+      '/assets/Products/Morja/578276362_1430406132419609_4192088856057847622_n.jpg'
     ],
     fabric: 'Pure Lawn Cotton with Heavy Embroidered Front & Matching Dupatta',
     description: 'Exclusive 3-piece luxury lawn outfit from Morja by Gulljee Volume 7 in Golden Mustard. Includes front silhouette, intricate embroidery detail shot, and draped dupatta view of the exact same design.',
@@ -422,7 +422,7 @@ export const LOOKBOOK_IMAGES = [
     subtitle: 'Signature terracotta embroidery on pure crisp lawn'
   },
   {
-    url: '/assets/Products/Morja, by gulljee volume 7/576250577_1430406579086231_1266473648545594627_n.jpg',
+    url: '/assets/Products/Morja/576250577_1430406579086231_1266473648545594627_n.jpg',
     title: 'Morja Vol. 7 Edit',
     subtitle: 'Hand-embroidered luxury lawn for grand celebrations'
   },
@@ -432,7 +432,7 @@ export const LOOKBOOK_IMAGES = [
     subtitle: 'Dense resham florals with pure chiffon draping'
   },
   {
-    url: '/assets/Products/Morja, by gulljee volume 7/576372613_1430406769086212_7668724769763923333_n.jpg',
+    url: '/assets/Products/Morja/576372613_1430406769086212_7668724769763923333_n.jpg',
     title: 'Gulljee Macro Needlework',
     subtitle: 'Close-up of intricate resham and zari craftsmanship'
   },
@@ -442,7 +442,7 @@ export const LOOKBOOK_IMAGES = [
     subtitle: 'Luxury evening couture with tilla borders'
   },
   {
-    url: '/assets/Products/Morja, by gulljee volume 7/576680360_1430406945752861_8771579035782719322_n.jpg',
+    url: '/assets/Products/Morja/576680360_1430406945752861_8771579035782719322_n.jpg',
     title: 'Dupatta Draping Art',
     subtitle: 'Exquisite jacquard and chiffon drapes'
   },
@@ -452,7 +452,7 @@ export const LOOKBOOK_IMAGES = [
     subtitle: 'Multi-perspective bridal luxury lawn suite'
   },
   {
-    url: '/assets/Products/Morja, by gulljee volume 7/576754659_1430406972419525_3748629922017711747_n.jpg',
+    url: '/assets/Products/Morja/576754659_1430406972419525_3748629922017711747_n.jpg',
     title: 'Signature Sapphire Silhouette',
     subtitle: 'Tailored luxury for modern elegance'
   }

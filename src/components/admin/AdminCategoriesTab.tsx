@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CategoryItem, Product } from '../../types';
 import { Plus, Edit3, Trash2, X, Folder, Eye, Check, AlertCircle } from 'lucide-react';
+import { getImageUrl, handleImageError } from '../../utils/imageUtils';
 
 interface AdminCategoriesTabProps {
   categories: CategoryItem[];
@@ -108,8 +109,9 @@ export const AdminCategoriesTab: React.FC<AdminCategoriesTabProps> = ({
                 <div className="relative h-36 bg-stone-100 overflow-hidden">
                   {cat.image ? (
                     <img
-                      src={cat.image}
+                      src={getImageUrl(cat.image)}
                       alt={cat.name}
+                      onError={handleImageError}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   ) : (
@@ -252,8 +254,9 @@ export const AdminCategoriesTab: React.FC<AdminCategoriesTabProps> = ({
                   />
                   {formData.image && (
                     <img
-                      src={formData.image}
+                      src={getImageUrl(formData.image)}
                       alt="Preview"
+                      onError={handleImageError}
                       className="w-9 h-9 rounded object-cover border border-stone-200 flex-shrink-0"
                     />
                   )}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sparkles, Star, ArrowRight, ShoppingBag, Heart } from 'lucide-react';
 import { Product } from '../types';
+import { getImageUrl, handleImageError } from '../utils/imageUtils';
 
 interface SpotlightShowcaseProps {
   products: Product[];
@@ -43,8 +44,9 @@ export const SpotlightShowcase: React.FC<SpotlightShowcaseProps> = ({
           >
             {/* Background image with gradient overlay */}
             <img
-              src={spotlightProduct.image}
+              src={getImageUrl(spotlightProduct.image)}
               alt={spotlightProduct.name}
+              onError={handleImageError}
               className="absolute inset-0 w-full h-full object-cover object-top opacity-70 group-hover:scale-105 transition-transform duration-700"
               referrerPolicy="no-referrer"
             />
@@ -117,8 +119,9 @@ export const SpotlightShowcase: React.FC<SpotlightShowcaseProps> = ({
                   {/* Thumbnail */}
                   <div className="w-20 h-24 sm:w-24 sm:h-28 rounded-lg overflow-hidden bg-stone-200 flex-shrink-0 relative">
                     <img
-                      src={p.image}
+                      src={getImageUrl(p.image)}
                       alt={p.name}
+                      onError={handleImageError}
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
                     />

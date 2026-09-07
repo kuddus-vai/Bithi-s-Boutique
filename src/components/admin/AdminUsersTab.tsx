@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { UserItem, Order } from '../../types';
+import { handleImageError } from '../../utils/imageUtils';
 import { 
   Plus, 
   Search, 
@@ -218,6 +219,7 @@ export const AdminUsersTab: React.FC<AdminUsersTabProps> = ({
                         <img
                           src={u.avatar || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80'}
                           alt={u.name}
+                          onError={handleImageError}
                           className="w-9 h-9 rounded-full object-cover border border-stone-200 flex-shrink-0"
                         />
                         <div>
@@ -473,6 +475,7 @@ export const AdminUsersTab: React.FC<AdminUsersTabProps> = ({
               <img
                 src={viewingUser.avatar || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80'}
                 alt={viewingUser.name}
+                onError={handleImageError}
                 className="w-14 h-14 rounded-full object-cover border-2 border-white shadow"
               />
               <div className="text-xs space-y-0.5">

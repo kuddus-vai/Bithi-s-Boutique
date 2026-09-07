@@ -14,7 +14,7 @@ export const INITIAL_CATEGORIES: CategoryItem[] = [
     name: 'Morja Vol. 7 by Gulljee',
     slug: 'morja-vol-7-gulljee',
     description: 'Original heavy embroidered 3-piece designer lawn with organza borders and jacquard duppatas.',
-    image: '/assets/Products/Morja, by gulljee volume 7/576250577_1430406579086231_1266473648545594627_n.jpg',
+    image: '/assets/Products/Morja/576250577_1430406579086231_1266473648545594627_n.jpg',
     featured: true,
   },
   {
@@ -22,7 +22,7 @@ export const INITIAL_CATEGORIES: CategoryItem[] = [
     name: 'Pure Luxury Lawn',
     slug: 'pure-luxury-lawn',
     description: 'Breathable, ultra-fine count combed cotton Swiss lawn made for royal Bengali celebrations.',
-    image: '/assets/Products/Roheenaz/638848135_1526645939462294_7043834316975239611_n.jpg',
+    image: '/assets/Products/Roheenaz/637744179_1526646106128944_7303331457700187441_n.jpg',
     featured: true,
   },
   {
@@ -30,7 +30,7 @@ export const INITIAL_CATEGORIES: CategoryItem[] = [
     name: 'Embroidered Chiffon',
     slug: 'embroidered-chiffon',
     description: 'Bespoke hand-embroidered pure chiffon bridal and evening formal party wear.',
-    image: '/assets/Products/Morja, by gulljee volume 7/576754659_1430406972419525_3748629922017711747_n.jpg',
+    image: '/assets/Products/Morja/576754659_1430406972419525_3748629922017711747_n.jpg',
     featured: false,
   },
   {
@@ -38,7 +38,7 @@ export const INITIAL_CATEGORIES: CategoryItem[] = [
     name: 'Festive Wedding Collection',
     slug: 'festive-wedding-collection',
     description: 'Zari and tilla worked heritage three-piece luxury wear for pre-wedding and post-wedding dawat.',
-    image: '/assets/Products/Roheenaz/638811409_1526646196128935_4078875569429598288_n.jpg',
+    image: '/assets/Products/Roheenaz/641165863_1526646166128938_9022687412292938589_n.jpg',
     featured: true,
   },
 ];
@@ -195,7 +195,7 @@ export const INITIAL_ORDERS: Order[] = [
       {
         productId: 'morja-outfit-01',
         productName: 'Morja Vol. 7 by Gulljee - Luxury Lawn #01',
-        image: '/assets/Products/Morja/Morja_Vol_7_by_Gulljee_Luxury_Embroidered_Lawn_Collection_2026_01.jpg',
+        image: '/assets/Products/Morja/576250577_1430406579086231_1266473648545594627_n.jpg',
         size: 'Unstitched 3-Piece',
         color: 'Plum Royale',
         price: 5200,
@@ -232,7 +232,7 @@ export const INITIAL_ORDERS: Order[] = [
       {
         productId: 'roheenaz-outfit-03',
         productName: 'Roheenaz Luxury Edition - Embroidered Lawn #03',
-        image: '/assets/Products/Roheenaz/637951230_1526645856128969_2984501239847162534_n.jpg',
+        image: '/assets/Products/Roheenaz/637744179_1526646106128944_7303331457700187441_n.jpg',
         size: 'L',
         color: 'Mint Sage',
         price: 5350,
@@ -268,7 +268,7 @@ export const INITIAL_ORDERS: Order[] = [
       {
         productId: 'roheenaz-outfit-02',
         productName: 'Roheenaz Luxury Edition - Embroidered Lawn #02',
-        image: '/assets/Products/Roheenaz/638978589_1526645776128977_8161536768393527961_n.jpg',
+        image: '/assets/Products/Roheenaz/639621535_1526645752795646_8672467895981638152_n.jpg',
         size: 'S',
         color: 'Teal Peacock',
         price: 5600,
@@ -303,7 +303,7 @@ export const INITIAL_ORDERS: Order[] = [
       {
         productId: 'morja-outfit-02',
         productName: 'Morja Vol. 7 by Gulljee - Luxury Lawn #02',
-        image: '/assets/Products/Morja/Morja_Vol_7_by_Gulljee_Luxury_Embroidered_Lawn_Collection_2026_02.jpg',
+        image: '/assets/Products/Morja/576754659_1430406972419525_3748629922017711747_n.jpg',
         size: 'Unstitched 3-Piece',
         color: 'Burgundy Crimson',
         price: 5150,
@@ -336,7 +336,7 @@ export const INITIAL_ORDERS: Order[] = [
       {
         productId: 'roheenaz-outfit-04',
         productName: 'Roheenaz Luxury Edition - Embroidered Lawn #04',
-        image: '/assets/Products/Roheenaz/638848135_1526645939462294_7043834316975239611_n.jpg',
+        image: '/assets/Products/Roheenaz/641165863_1526646166128938_9022687412292938589_n.jpg',
         size: 'Unstitched 3-Piece',
         color: 'Rose Quartz',
         price: 5250,

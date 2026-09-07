@@ -1,6 +1,7 @@
 import React from 'react';
 import { Product } from '../types';
 import { X, Heart, ShoppingBag, Trash2 } from 'lucide-react';
+import { getImageUrl, handleImageError } from '../utils/imageUtils';
 
 interface WishlistModalProps {
   isOpen: boolean;
@@ -64,8 +65,9 @@ export const WishlistModal: React.FC<WishlistModalProps> = ({
                   }}
                 >
                   <img
-                    src={product.image}
+                    src={getImageUrl(product.image)}
                     alt={product.name}
+                    onError={handleImageError}
                     className="w-16 h-20 object-cover rounded-xl flex-shrink-0"
                     referrerPolicy="no-referrer"
                   />

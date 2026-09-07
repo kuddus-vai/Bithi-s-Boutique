@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { LOOKBOOK_IMAGES } from '../data/products';
 import { Sparkles, Instagram, X, Eye } from 'lucide-react';
+import { getImageUrl, handleImageError } from '../utils/imageUtils';
 
 export const LookbookSection: React.FC = () => {
   const [activeLightbox, setActiveLightbox] = useState<typeof LOOKBOOK_IMAGES[0] | null>(null);
@@ -34,8 +35,9 @@ export const LookbookSection: React.FC = () => {
               className="group relative aspect-[3/4] rounded-2xl sm:rounded-3xl overflow-hidden border border-[#D4AF37]/30 shadow-2xl cursor-pointer bg-[#25201C]"
             >
               <img
-                src={item.url}
+                src={getImageUrl(item.url)}
                 alt={item.title}
+                onError={handleImageError}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
               />
@@ -75,8 +77,9 @@ export const LookbookSection: React.FC = () => {
             </button>
             <div className="aspect-[3/4] w-full bg-black">
               <img
-                src={activeLightbox.url}
+                src={getImageUrl(activeLightbox.url)}
                 alt={activeLightbox.title}
+                onError={handleImageError}
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />

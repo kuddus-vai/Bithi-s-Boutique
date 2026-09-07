@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Sparkles, Heart, ShoppingBag, ArrowRight, Star, Check } from 'lucide-react';
 import { Product } from '../types';
+import { getImageUrl, handleImageError } from '../utils/imageUtils';
 
 interface BestSellingSectionProps {
   products: Product[];
@@ -76,8 +77,9 @@ export const BestSellingSection: React.FC<BestSellingSectionProps> = ({
                 {/* Image Container with Badges */}
                 <div className="relative aspect-[3/4] overflow-hidden bg-stone-100">
                   <img
-                    src={product.image}
+                    src={getImageUrl(product.image)}
                     alt={product.name}
+                    onError={handleImageError}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
                   />

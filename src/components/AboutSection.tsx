@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sparkles, Award, ShieldCheck, HeartHandshake, CheckCircle2 } from 'lucide-react';
 import { PRODUCTS } from '../data/products';
+import { getImageUrl, handleImageError } from '../utils/imageUtils';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -81,8 +82,9 @@ export const AboutSection: React.FC = () => {
           <div className="lg:col-span-5 relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-2 border-stone-200 relative group">
               <img
-                src={PRODUCTS[0].image}
+                src={getImageUrl(PRODUCTS[0].image)}
                 alt="Bithi's Boutique Craftsmanship"
+                onError={handleImageError}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
               />

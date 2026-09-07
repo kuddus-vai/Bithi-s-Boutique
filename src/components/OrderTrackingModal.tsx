@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Order, OrderStatus } from '../types';
+import { getImageUrl, handleImageError } from '../utils/imageUtils';
 import { 
   Search, 
   X, 
@@ -216,7 +217,13 @@ export const OrderTrackingModal: React.FC<OrderTrackingModalProps> = ({
                 {searchedOrder.items.map((item, idx) => (
                   <div key={idx} className="p-3 bg-white rounded-xl border border-stone-200 flex items-center justify-between text-xs">
                     <div className="flex items-center gap-3">
-                      <img src={item.image} alt={item.productName} className="w-10 h-12 object-cover rounded" />
+                      <img
+                        src={getImageUrl(item.image)}
+                        alt={item.productName}
+                        onError={handleImageError}
+                        className="w-10 h-12 object-cover rounded"
+                        referrerPolicy="no-referrer"
+                      />
                       <div>
                         <div className="font-semibold text-stone-900">{item.productName}</div>
                         <div className="text-[11px] text-stone-500">

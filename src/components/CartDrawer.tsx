@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CartItem, Order } from '../types';
+import { getImageUrl, handleImageError } from '../utils/imageUtils';
 import { 
   X, 
   Trash2, 
@@ -392,8 +393,9 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 {cartItems.map((item, idx) => (
                   <div key={idx} className="flex gap-4 p-4 rounded-2xl bg-[#FCFAF7] border border-[#EADBC8] items-center">
                     <img
-                      src={item.product.image}
+                      src={getImageUrl(item.product.image)}
                       alt={item.product.name}
+                      onError={handleImageError}
                       className="w-16 h-20 object-cover rounded-xl flex-shrink-0"
                       referrerPolicy="no-referrer"
                     />

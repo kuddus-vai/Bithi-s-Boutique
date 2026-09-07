@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Sparkles, Heart, ShoppingBag, ArrowRight, Star, Check, MessageCircle, PlusCircle, ShieldCheck } from 'lucide-react';
 import { Product } from '../types';
+import { getImageUrl, handleImageError } from '../utils/imageUtils';
 
 interface CategoryShowcaseProps {
   title: string;
@@ -93,8 +94,9 @@ export const CategoryShowcase: React.FC<CategoryShowcaseProps> = ({
                   {/* Image */}
                   <div className="relative aspect-[3/4] overflow-hidden bg-stone-100">
                     <img
-                      src={product.image}
+                      src={getImageUrl(product.image)}
                       alt={product.name}
+                      onError={handleImageError}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       referrerPolicy="no-referrer"
                     />
@@ -206,8 +208,9 @@ export const CategoryShowcase: React.FC<CategoryShowcaseProps> = ({
                 {categoryImage ? (
                   <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden border-2 border-[#D4AF37]/40 flex-shrink-0 shadow-md">
                     <img
-                      src={categoryImage}
+                      src={getImageUrl(categoryImage)}
                       alt={title}
+                      onError={handleImageError}
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
                     />

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Sparkles, ArrowRight, ChevronRight, ChevronLeft, ShieldCheck, Truck, RefreshCw, Star } from 'lucide-react';
 import { PRODUCTS } from '../data/products';
 import { Product, CategoryItem } from '../types';
+import { getImageUrl, handleImageError } from '../utils/imageUtils';
 
 interface HeroProps {
   onExploreClick: () => void;
@@ -137,8 +138,9 @@ export const Hero: React.FC<HeroProps> = ({
             <div className="relative rounded-2xl overflow-hidden bg-[#121214] text-white shadow-xl min-h-[420px] sm:min-h-[460px] flex flex-col justify-between p-6 sm:p-10 lg:p-12">
               {/* Background Product Image with Smooth Transition */}
               <img
-                src={currentHero.product.image}
+                src={getImageUrl(currentHero.product.image)}
                 alt={currentHero.title}
+                onError={handleImageError}
                 className="absolute inset-0 w-full h-full object-cover object-center opacity-70 transition-all duration-700 ease-in-out"
                 referrerPolicy="no-referrer"
               />

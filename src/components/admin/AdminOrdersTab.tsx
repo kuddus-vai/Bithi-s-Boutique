@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Order, OrderStatus, Product, OrderTimelineEvent } from '../../types';
+import { getImageUrl, handleImageError } from '../../utils/imageUtils';
 import { 
   Plus, 
   Search, 
@@ -345,8 +346,9 @@ export const AdminOrdersTab: React.FC<AdminOrdersTabProps> = ({
                         {order.items.slice(0, 2).map((item, idx) => (
                           <img
                             key={idx}
-                            src={item.image}
+                            src={getImageUrl(item.image)}
                             alt={item.productName}
+                            onError={handleImageError}
                             className="w-8 h-10 object-cover rounded border border-stone-200"
                             title={`${item.productName} (${item.size})`}
                           />
@@ -536,7 +538,13 @@ export const AdminOrdersTab: React.FC<AdminOrdersTabProps> = ({
                 {selectedOrderForModal.items.map((item, idx) => (
                   <div key={idx} className="p-3 bg-stone-50 rounded-xl border border-stone-200 flex items-center justify-between text-xs">
                     <div className="flex items-center gap-3">
-                      <img src={item.image} alt={item.productName} className="w-10 h-12 object-cover rounded" />
+                      <img
+                        src={getImageUrl(item.image)}
+                        alt={item.productName}
+                        onError={handleImageError}
+                        className="w-10 h-12 object-cover rounded"
+                        referrerPolicy="no-referrer"
+                      />
                       <div>
                         <div className="font-semibold text-stone-900">{item.productName}</div>
                         <div className="text-[11px] text-stone-500">

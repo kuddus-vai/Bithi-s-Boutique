@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Sparkles, ArrowRight, Clock } from 'lucide-react';
 import { PRODUCTS } from '../data/products';
+import { getImageUrl, handleImageError } from '../utils/imageUtils';
 
 interface CountdownBannerProps {
   onExploreClick: () => void;
@@ -123,8 +124,9 @@ export const CountdownBanner: React.FC<CountdownBannerProps> = ({ onExploreClick
             <div className="lg:col-span-5 flex items-center justify-center relative">
               <div className="relative w-full max-w-sm sm:max-w-md aspect-[4/5] rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl">
                 <img
-                  src={featuredOutfit.image}
+                  src={getImageUrl(featuredOutfit.image)}
                   alt={featuredOutfit.name}
+                  onError={handleImageError}
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />

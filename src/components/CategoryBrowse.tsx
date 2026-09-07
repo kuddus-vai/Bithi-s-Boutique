@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import { PRODUCTS } from '../data/products';
 import { CategoryItem, Product } from '../types';
+import { getImageUrl, handleImageError } from '../utils/imageUtils';
 
 interface CategoryBrowseProps {
   onSelectCategory: (cat: string) => void;
@@ -152,8 +153,9 @@ export const CategoryBrowse: React.FC<CategoryBrowseProps> = ({
             >
               <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden p-1 border-2 border-stone-200 group-hover:border-[#C23330] transition-all duration-300 shadow-sm group-hover:shadow-md">
                 <img
-                  src={cat.image}
+                  src={getImageUrl(cat.image)}
                   alt={cat.name}
+                  onError={handleImageError}
                   className="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />

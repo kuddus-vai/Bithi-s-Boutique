@@ -27,21 +27,67 @@ export default function App() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All Collections');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  // Products state with localStorage persistence
+  // Products state with localStorage persistence and automatic image healing
   const [products, setProducts] = useState<Product[]>(() => {
     try {
       const saved = localStorage.getItem('brithi_products');
-      return saved ? JSON.parse(saved) : PRODUCTS;
+      if (!saved) return PRODUCTS;
+      const parsed: Product[] = JSON.parse(saved);
+      const prodMap = new Map(PRODUCTS.map(p => [p.id, p]));
+      
+      // Heal image paths and restore canonical high-res assets
+      const healed = parsed.map(p => {
+        const canonical = prodMap.get(p.id);
+        if (canonical) {
+          return {
+            ...p,
+            image: canonical.image,
+            additionalImages: canonical.additionalImages && canonical.additionalImages.length > 0 ? canonical.additionalImages : [canonical.image],
+          };
+        }
+        return p;
+      });
+
+      // If new products exist in catalog that weren't in saved list, append them
+      PRODUCTS.forEach(p => {
+        if (!healed.some(item => item.id === p.id)) {
+          healed.push(p);
+        }
+      });
+
+      return healed;
     } catch {
       return PRODUCTS;
     }
   });
 
-  // Categories state with localStorage persistence
+  // Categories state with localStorage persistence and image healing
   const [categories, setCategories] = useState<CategoryItem[]>(() => {
     try {
       const saved = localStorage.getItem('brithi_categories');
-      return saved ? JSON.parse(saved) : INITIAL_CATEGORIES;
+      if (!saved) return INITIAL_CATEGORIES;
+      const parsed: CategoryItem[] = JSON.parse(saved);
+      const catMap = new Map(INITIAL_CATEGORIES.map(c => [c.id, c]));
+      
+      const healed = parsed.map(c => {
+        const canonical = catMap.get(c.id);
+        if (canonical) {
+          return {
+            ...c,
+            image: canonical.image,
+          };
+        }
+        return c;
+      });
+
+      // Ensure all initial categories exist
+      INITIAL_CATEGORIES.forEach(c => {
+        if (!healed.some(item => item.id === c.id)) {
+          healed.push(c);
+        }
+      });
+
+      return healed;
     } catch {
       return INITIAL_CATEGORIES;
     }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Product } from '../types';
 import { X, Star, Heart, ShoppingBag, ShieldCheck, Truck, Sparkles, Check, MessageCircle, Ruler } from 'lucide-react';
+import { getImageUrl, handleImageError } from '../utils/imageUtils';
 
 interface ProductModalProps {
   product: Product;
@@ -67,8 +68,9 @@ export const ProductModal: React.FC<ProductModalProps> = ({
           <div className="space-y-4">
             <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-stone-100 border border-[#EADBC8] relative group">
               <img
-                src={activeImage}
+                src={getImageUrl(activeImage)}
                 alt={product.name}
+                onError={handleImageError}
                 className="w-full h-full object-cover transition-all duration-300"
                 referrerPolicy="no-referrer"
               />
@@ -92,7 +94,13 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                         activeImage === img ? 'border-[#D4AF37] scale-105 shadow-md' : 'border-stone-200 opacity-60 hover:opacity-100'
                       }`}
                     >
-                      <img src={img} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                      <img
+                        src={getImageUrl(img)}
+                        alt=""
+                        onError={handleImageError}
+                        className="w-full h-full object-cover"
+                        referrerPolicy="no-referrer"
+                      />
                       <span className="absolute bottom-0 inset-x-0 bg-black/70 text-[9px] text-white text-center py-0.5 font-bold">
                         #{idx + 1}
                       </span>

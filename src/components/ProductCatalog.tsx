@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Product, CategoryItem } from '../types';
 import { CATEGORIES } from '../data/products';
 import { Heart, ShoppingBag, Eye, Star, Sparkles, Filter, Check } from 'lucide-react';
+import { getImageUrl, handleImageError } from '../utils/imageUtils';
 
 interface ProductCatalogProps {
   products: Product[];
@@ -171,8 +172,9 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
                 {/* Image Container */}
                 <div className="relative aspect-[3/4] overflow-hidden bg-stone-100">
                   <img
-                    src={product.image}
+                    src={getImageUrl(product.image)}
                     alt={product.name}
+                    onError={handleImageError}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
                   />

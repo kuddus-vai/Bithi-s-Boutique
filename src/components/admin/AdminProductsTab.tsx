@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Product, CategoryItem } from '../../types';
+import { getImageUrl, handleImageError } from '../../utils/imageUtils';
 import { 
   Plus, 
   Search, 
@@ -249,8 +250,9 @@ export const AdminProductsTab: React.FC<AdminProductsTabProps> = ({
                   <td className="py-3 px-4">
                     <div className="flex items-center gap-3">
                       <img
-                        src={prod.image}
+                        src={getImageUrl(prod.image)}
                         alt={prod.name}
+                        onError={handleImageError}
                         className="w-12 h-14 object-cover rounded-lg border border-stone-200 flex-shrink-0"
                         referrerPolicy="no-referrer"
                       />
@@ -510,8 +512,9 @@ export const AdminProductsTab: React.FC<AdminProductsTabProps> = ({
                   />
                   {formData.image && (
                     <img
-                      src={formData.image}
+                      src={getImageUrl(formData.image)}
                       alt="Preview"
+                      onError={handleImageError}
                       className="w-9 h-9 rounded object-cover border border-stone-200 flex-shrink-0"
                     />
                   )}
@@ -648,9 +651,11 @@ export const AdminProductsTab: React.FC<AdminProductsTabProps> = ({
 
             <div className="flex gap-4">
               <img
-                src={viewingProduct.image}
+                src={getImageUrl(viewingProduct.image)}
                 alt={viewingProduct.name}
+                onError={handleImageError}
                 className="w-28 h-36 object-cover rounded-xl border border-stone-200 flex-shrink-0"
+                referrerPolicy="no-referrer"
               />
               <div className="space-y-2 text-xs">
                 <h4 className="font-serif text-base font-bold text-stone-900">{viewingProduct.name}</h4>

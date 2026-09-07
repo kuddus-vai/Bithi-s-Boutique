@@ -1,5 +1,6 @@
 import React from 'react';
 import { Product, CategoryItem, UserItem, Order, OrderStatus } from '../../types';
+import { getImageUrl, handleImageError } from '../../utils/imageUtils';
 import { 
   DollarSign, 
   ShoppingBag, 
@@ -316,8 +317,9 @@ export const AdminDashboardTab: React.FC<AdminDashboardTabProps> = ({
                     <div className="flex items-center gap-2">
                       {cat.image ? (
                         <img
-                          src={cat.image}
+                          src={getImageUrl(cat.image)}
                           alt={cat.name}
+                          onError={handleImageError}
                           className="w-7 h-7 rounded object-cover"
                         />
                       ) : (
