@@ -1,0 +1,6 @@
+{
+  "name": "Bithi's Boutique",
+  "description": "Exquisite designer ethnic wear, luxury salwar suits, kurtis, and festive collections. Serving since 2019.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
